@@ -1,0 +1,55 @@
+# import serial
+# import time
+# """This code will play the StarWars Main Theme. I created every since constant for each and every note and constants for each duration (quarter, half) and each record and play.
+#    I then created each part (first part, second part etc etc) and put each note and each duration for the note and then used the connection.write method and called each and every record and play"""
+# connection = serial.Serial('COM8',115200, timeout=1)
+# connection.write(b'\x80\x83')
+# print("sleep")
+# time.sleep(10)
+# record=b'\x8C\x00\x05'
+# record2=b'\x8C\x01\x0E'
+# record3=b'\x8C\x02\x0F'
+# record4=b'\x8C\x03\x04'
+# play=b'\x8D\x00'
+# play2=b'\x8D\x01'
+# play3=b'\x8D\x02'
+# play4=b'\x8D\x03'
+# A1=b'\x39'
+# B1=b'\x3B'
+# C1=b'\x3C'
+# D1=b'\x32'
+# D2=b'\x3E'
+# G2=b'\x43'
+# eighth=b'\x10'
+# G1=b'\x37'
+# half=b'\x37'
+# D3=b'\x4A'
+# quarter=b'\x28'     
+# first_part= D1+eighth+D1+eighth+D1+eighth+G1+half+D2+half
+# second_part=C1+eighth+B1+eighth+A1+eighth+G2+half+D2+quarter+C1+eighth+B1+eighth+A1+eighth+G2+half+D2+quarter+C1+eighth+B1+eighth+C1+eighth+A1+half
+# third_part=D1+eighth+D1+eighth+D1+eighth+G1+half+D2+half+C1+eighth+B1+eighth+A1+eighth+G2+half+D2+half+C1+eighth+B1+eighth+A1+eighth+G2+half+D2+half
+# fourth_part=C1+eighth+B1+eighth+C1+eighth+A1+half
+# print('wrote')
+# connection.write(record + first_part)
+# print('ready1')
+# time.sleep(1)
+# connection.write(play)
+# print('play')
+# time.sleep(1.5)
+# print('slept')
+# connection.write(record2 + second_part)
+# print("ready2")
+# time.sleep(1)
+# connection.write(play2)
+# print('play')
+# time.sleep(5.5)
+# connection.write(record3 + third_part)
+# print('ready3')
+# time.sleep(1)
+# connection.write(play3)
+# time.sleep(6.5)
+# connection.write(record4 + fourth_part)
+# print('ready4')
+# time.sleep(1)
+# connection.write(play4)
+# print('done hahahahahahahahahahahahahahahahahahahahahahahahahahahaha')
